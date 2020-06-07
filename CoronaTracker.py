@@ -64,4 +64,3 @@ def call_data(fips):
     plt.title("Covid 19 Cases and Deaths for {}".format(rslt_list[0][1]))
     plt.legend()
     plt.show()
-for i in range:
