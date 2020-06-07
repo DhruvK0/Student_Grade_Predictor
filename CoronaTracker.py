@@ -55,12 +55,13 @@ def call_data(fips):
     rslt2_list = rslt2_df.values.tolist()
     print(y1_values)
     for i in range (4,(len(dates)+4)):
-        y1_values.append(rslt_list[0][i])
-        y2_values.append(rslt2_list[0][i])
-    plt.plot(x_values,y1_values, label="Confirmed Cases")
+        y1_values.append(int(rslt_list[0][i])-(int(rslt_list[0][i-1])))
+        y2_values.append(int(rslt2_list[0][i])-(int(rslt2_list[0][i-1])))
+    plt.plot(x_values,y1_values, label="Daily New Cases")
     plt.plot(x2_values,y2_values, label="Deaths")
     plt.xlabel("Dates")
     plt.ylabel("Count")
     plt.title("Covid 19 Cases and Deaths for {}".format(rslt_list[0][1]))
     plt.legend()
     plt.show()
+for i in range:
